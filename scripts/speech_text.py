@@ -497,6 +497,8 @@ def similarity(a, b):
 
 
 def get_record(title, records):
+    if title is None:
+        return None
     for key, value in records.items():
         if similarity(title, key) > 0.9:
             return value
